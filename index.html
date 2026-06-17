@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+ <body>
+
+    <div class="dashboard">
+        
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>EduTrack</h2>
+            </div>
+
+            <ul class="menu">
+
+                        <li class="menu-item active" id="dashboardMenu">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li class="menu-item" id="studentsMenu">
+                <i class="fa-solid fa-users"></i>
+                Students
+            </li>
+
+            <li class="menu-item" id="analyticsMenu">
+                <i class="fa-solid fa-chart-column"></i>
+                Analytics
+            </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <header class="topbar">
+                            <div class="topbar-actions">
+                <button id="themeToggle">
+                    🌙 Dark Mode
+                </button>
+ </div>
+
+                <div>
+                    <h1>Dashboard 👋</h1>
+                    <p>Welcome back! Manage your students efficiently.</p>
+                </div>
+
+                <div class="profile">
+
+    <span>👨‍💼 Admin</span>
+
+    <button id="logoutBtn">
+        Logout
+    </button>
+
+ </div>
+
+            </header>
+
+            <!-- Stat Cards -->
+  <section class="cards" id="dashboardSection">
+
+    <div class="card">
+        <h3>Total Students</h3>
+        <h2 id="totalStudents">0</h2>
+    </div>
+
+    <div class="card">
+        <h3>Present Today</h3>
+        <h2 id="presentStudents">0</h2>
+    </div>
+
+    <div class="card">
+        <h3>Absent Today</h3>
+        <h2 id="absentStudents">0</h2>
+    </div>
+
+    <div class="card">
+        <h3>Attendance %</h3>
+        <h2 id="attendancePercentage">0%</h2>
+    </div>
+
+ </section>
+          <div class="content-section" id="studentsSection">
+
+    <!-- Student Records -->
+
+    <div class="student-records">
+
+        <div class="section-header">
+            <h2>📋 Student Records</h2>
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name, course or roll number">
+        </div>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Roll No</th>
+                    <th>Attendance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- Add Student -->
+
+    <div class="add-student">
+
+        <h2>➕ Add New Student</h2>
+
+        <input type="text" id="name" placeholder="Student Name">
+
+        <input type="email" id="email" placeholder="Email Address">
+
+        <input type="text" id="course" placeholder="Course">
+
+        <input type="text" id="rollNumber" placeholder="Roll Number">
+
+        <button id="addStudentBtn">
+            Add Student
+        </button>
+
+    </div>
+
+     
+    </div>
+      <div class="chart-container" id="analyticsSection">
+
+    <h2>📊 Attendance Analytics</h2>
+
+    <canvas id="attendanceChart"></canvas>
+    <button id="downloadReportBtn" class="report-btn">
+    📥 Download Attendance Report
+</button>
+
+    </div>
+
+
+ </main>
+  
+   
+    </div>
+    <footer class="footer">
+    Developed by Subhash Karadi | Frontend Project
+    </footer>
+     
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
